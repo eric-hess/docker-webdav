@@ -3,6 +3,7 @@ FROM alpine:3.17
 RUN apk upgrade --no-cache && apk add --no-cache \
     nginx \
     nginx-mod-http-dav-ext \
+    nginx-mod-http-headers-more \
     openssl
 
 COPY webdav.conf /etc/nginx/http.d/default.conf
