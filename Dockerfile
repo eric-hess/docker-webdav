@@ -6,6 +6,8 @@ RUN apk upgrade --no-cache && apk add --no-cache \
     nginx-mod-http-headers-more \
     openssl
 
+RUN sed -i "s/user nginx;/user root;/g" /etc/nginx/nginx.conf
+
 COPY webdav.conf /etc/nginx/http.d/default.conf
 
 COPY entrypoint.sh /opt/webdav/entrypoint.sh
