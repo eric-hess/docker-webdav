@@ -14,6 +14,7 @@ COPY entrypoint.sh /opt/webdav/entrypoint.sh
 
 ENV WEBDAV_USER=webdav
 ENV WEBDAV_PASSWORD=webdav
+ENV WEBDAV_MAX_UPLOAD_SIZE=0
 
 ENTRYPOINT ["/opt/webdav/entrypoint.sh"]
 
