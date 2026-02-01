@@ -25,8 +25,11 @@ docker run -it --rm \
 ```
 
 ## Available env variables
-| Variable name            | Default value | Description                                                                                                                               |
-|--------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `WEBDAV_USER`            | webdav        | The username of the user who should be created                                                                                            |
-| `WEBDAV_PASSWORD`        | webdav        | The users password which should be user                                                                                                   |
-| `WEBDAV_MAX_UPLOAD_SIZE` | 0             | Sets the maximum allowed size of the client request body. (http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size)  |
+| Variable name            | Default value              | Description                                                                                                                               |
+|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `WEBDAV_USER`            | webdav                     | The username of the user who should be created                                                                                            |
+| `WEBDAV_PASSWORD`        | webdav                     | The users password which should be user                                                                                                   |
+| `WEBDAV_MAX_UPLOAD_SIZE` | 0                          | Sets the maximum allowed size of the client request body. (http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size)  |
+| `PUID`                   | 0                          | User ID for nginx process. Set to non-zero to run as non-root user                                                                        |
+| `PGID`                   | 0                          | Group ID for nginx process. Set together with PUID                                                                                        |
+| `LISTEN_PORT`            | 80                         | Port nginx listens on inside the container                                                                                                |
